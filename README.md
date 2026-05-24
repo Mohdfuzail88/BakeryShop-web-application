@@ -26,7 +26,7 @@ A web-based application designed to digitalize and manage daily bakery shop oper
 1. **Download the Project:**
    * Click on the green **"Code"** button at the top right of this GitHub page.
    * Select **"Download ZIP"** and extract the files on your computer.
-2. **Open in Visual Studio:** Open the `BakeryShop.sln` file in Microsoft Visual Studio.
+2. **Open in Visual Studio:** Open the `BakeryShop` folder in Microsoft Visual Studio or Vs Code.
 3. **Database Setup:** 
    * Locate the `database.mdf` file inside your project folder.
    * In Visual Studio, open the **Server Explorer** (on the left side).
