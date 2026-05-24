@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Adminmasterpage.master.cs" Inherits="Admin_Adminmasterpage" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>     
+<!-- font awesome cdn link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+<!-- custom css file link  -->  
+<link href="css/StyleSheet.css" rel="stylesheet" />  
+<asp:ContentPlaceHolder id="head" runat="server">
+</asp:ContentPlaceHolder>
+<style>
+body {        
+}
+header {
+background:lightcyan;
+}
+header .logo {
+color: black;
+font-size: 2rem;
+font-weight: normal;
+}
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.alert-danger {
+color: #a94442;
+background-color: #f2dede;
+border-color: #ebccd1;   
+}
+p {
+display: block;
+font-size:medium;
+}
+</style>
+</head>
+<body>  
+<form id="form1" runat="server">
+<!-- header section starts      -->
+<header>
+<a href="#" class="logo"><i class="fas fa-utensils"></i>.MFBakery</a>
+<nav class="navbar">        
+<a class="active" href="AdminHome.aspx">Home</a>
+<a href="AddProduct.aspx">Add Product</a>
+<a href="ProductList.aspx">Product List</a>           
+<a href="OrderList.aspx">Order List</a>
+<a href="UserList.aspx">User List</a>
+
+<asp:LinkButton runat="server" ID="LogOut"   Onclick="LogOut_Click" >LogOut</asp:LinkButton>
+<asp:LinkButton runat="server" ID="Login"   Onclick="Login_Click">Login</asp:LinkButton>
+</nav>  
+<div class="icons">
+<i class="fas fa-bars" id="menu-bars"></i>      
+</div>
+</header>
+<!-- header section ends-->
+<div>
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+</asp:ContentPlaceHolder>
+</div>
+</form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />   
+<footer>
+<div class ="alert alert-danger ">            
+<p class ="pull-right "><a href="../L.aspx" style="font-size:medium;">User Login  </a></p> 
+<p>&copy;2023 MFBakery.in   </p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

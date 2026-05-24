@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Home</title>    
+<!-- font awesome cdn link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+<!-- custom css file link  -->
+  
+<link href="css/StyleSheet.css" rel="stylesheet" /> 
+<script>
+$(document).ready(function myfunction() {
+$("#btnCart").click(function myfunction() {
+window.location.href = "Cart.aspx";
+});
+});
+</script>
+<asp:ContentPlaceHolder id="head" runat="server">
+</asp:ContentPlaceHolder>
+<style>
+.navbar a {
+text-decoration:none;
+}       
+.container .row{      
+display: flex;
+flex-wrap: wrap;
+padding-bottom: 3rem;
+}
+.container  .col-md-4 {
+float: left;
+font-size: 2rem;
+}
+.container .row    .col-md-4{
+position: relative;
+min-height: 1px;
+padding-right: 30px;
+padding-left: 50px;
+padding-bottom: 4rem;
+}
+input[type="submit" ] {   
+user-select: none;
+white-space: pre;
+align-items: flex-start;
+text-align: center;
+cursor: default;  
+color: buttontext;
+padding: 1px 6px;
+border-width: 2px;
+border-image: initial;
+}
+.home .slides-container .slide .content h3 {
+font-size: 2.5rem;
+color: #222;
+padding: .5rem 0;
+}
+.header .navbar.nav-1 .flex {
+padding-top: 0.1px;
+padding-bottom: 0.1px;
+}
+.header .navbar.nav-2 .flex{
+padding-top: 0;
+padding-bottom: 5px;
+background: #fff;
+}
+ol, ul {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+</style>
+</head>
+<body>
+<form id="form1" runat="server">
+<!-- header section starts  -->
+<header class="header">
+<nav class="navbar nav-1">
+<section class="flex">
+<a href=" Index.aspx" class="logo"><i class="fas fa-utensils"></i>.MFBakery</a>        
+<ul>
+<li>
+<asp:Button ID="Button3" CssClass ="btn btn-link navbar-btn " runat="server" Text="" style="padding-top: 1rem;"  />
+</li>
+</ul>       
+</section>
+</nav>
+<nav class="navbar nav-2">
+<section class="flex">
+<div id="menu-btn" class="fas fa-bars"></div>
+<div class="menu">
+<ul>
+<li><a href="Index.aspx">Home</a>                  
+</li>
+<li><a href="#"> Category<i class="fas fa-angle-down"></i></a>
+<ul>
+<li> <a href ="Product.aspx">All Products</a></li>
+<li role="separator" class ="divider "></li> 
+<li><a href="ChristmasCake.aspx">Christmas Cake</a></li>
+<li><a href="Breads.aspx">Breads</a></li>
+<li><a href="Cakes.aspx">Cakes</a></li>
+<li><a href="Pastries.aspx">Pastries</a></li>
+<li><a href="BreakfastBunsandRolls.aspx">Breakfast Buns & Rolls</a></li>
+<li><a href="LightEatsVeg.aspx">Light Eats Veg</a></li>
+<li><a href="HappyBirthdayCake.aspx">Happy Birthday Cake</a></li>
+<li><a href="LightEatsNonVeg.aspx">Light Eats Non Veg</a></li>
+<li><a href="DryCakes.aspx">Dry Cakes</a></li>
+<li><a href="BrowniesandCookies.aspx">Brownies and Cookies</a></li>                    
+</ul>                 
+</li>               
+<li><a href="About.aspx">About</a>                  
+</li>              
+</ul>
+</div>
+<ul>
+<li>
+<button id="btnCart" class="btn btn-primary navbar-btn" type="button" style=" font-size:1.5rem;  background:#337ab7; border-radius: 1rem; margin-top: 8px; height: 3rem; " >
+Cart<span class="badge" id="pCount" runat="server" style=" top: -2px;"></span>
+</button>
+</li>
+<li>
+<asp:Button ID="Login" runat="server" style=" margin-left:1.9rem; border-radius: 1rem; margin-top: 8px;  height: 3rem; background:#337ab7;  color: #fff;"  Text="Login" OnClick="Login_Click"  /></li>
+<li>
+<asp:Button ID="Logout" runat="server" style=" border-radius: 1rem; margin-top: 8px;  height: 3rem; margin-left:1.9rem; background:#337ab7;  color: #fff;"  Text=" Logout" OnClick="Logout_Click"  /></li>          
+</ul>
+</section>
+</nav>
+</header>
+<!-- header section ends -->         
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+</asp:ContentPlaceHolder>   
+</form>
+<!-- footer section starts  -->
+<footer class="footer">
+<section class="flex">
+<div class="box">
+<a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
+<a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
+<a href="mailto:Bakery@gmail.com"><i class="fas fa-envelope"></i><span>Bakery@gmail.com</span></a>
+<a href="#"><i class="fas fa-map-marker-alt"></i><span>Satna ,Madhya Pradesh, INDIA</span></a>
+</div>
+<div class="box">
+<a href="Index.aspx"><span>home</span></a>
+<a href="About.aspx"><span>about</span></a>
+<a href="ChristmasCake.aspx"><span>Category</span></a>         
+</div>
+<div class="box">
+<a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+<a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+<a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+<a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+</div>
+</section>
+<div class="credit">copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!</div>
+</footer>
+<!-- footer section ends -->
+<!-- custom js file link  -->
+<script src="js/Jscript.js"></script>
+</body>
+</html>
